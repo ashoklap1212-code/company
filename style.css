@@ -365,6 +365,7 @@ nav a:hover {
 .com {
     margin-bottom: 1;
     margin-top: 60px;
+    margin-left: 70px;
 }
 
 .footer {
@@ -517,6 +518,7 @@ nav a:hover {
 .services h2 {
     font-size: 38px;
     margin-bottom: 50px;
+    margin-top: -100px;
 }
 
 .card-container {
@@ -616,15 +618,17 @@ nav a:hover {
         align-items: center;
     }
     nav {
-        display: flex;
+        display: none;
         flex-wrap: wrap;
         justify-content: center;
     }
     .hero h1 {
-        font-size: 32px;
+        font-size: 20px;
+        align-items: center;
     }
     .hero p {
-        font-size: 16px;
+        font-size: 20px;
+        align-items: center;
     }
     .boy-image {
         width: 120px;
@@ -633,11 +637,49 @@ nav a:hover {
     }
     .footer-container {
         flex-direction: column;
+        display: flex;
+        justify-content: flex-start;
     }
     .footer-links {
         grid-template-columns: repeat(2, 1fr);
     }
     .tech-container {
         gap: 40px;
+    }
+    .footer {
+        display: flex;
+        justify-content: flex-start;
+        width: 468px;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+    .theme-toggle {
+        margin-left: 200px;
+    }
+}
+
+
+/* Mobile Screen */
+
+@media (max-width:768px) {
+    nav {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1px;
+    }
+    nav.logo {
+        font-size: 18px;
+        margin-left: 100px;
+        width: 500px;
+        /* logo konjam small */
+    }
+    nav ul {
+        display: flex;
+        gap: 50px;
+        font-size: 14px;
+    }
+    .btn-nav {
+        display: flex;
     }
 }
