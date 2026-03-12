@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Dashboard</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Poppins, sans-serif;
+            background: linear-gradient(135deg, #020617, #020c2a);
+            color: white;
+            padding: 30px;
+        }
+        
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(255, 255, 255, 0.06);
+            padding: 22px;
+            border-radius: 26px;
+            backdrop-filter: blur(14px);
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.45);
+        }
+        
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 28px;
+            margin-top: 28px;
+        }
+        
+        .card {
+            background: rgba(255, 255, 255, 0.07);
+            padding: 26px;
+            border-radius: 26px;
+            transition: 0.35s ease;
+            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.35);
+        }
+        
+        .card:hover {
+            transform: translateY(-9px) scale(1.02);
+        }
+        
+        .table-box {
+            background: rgba(255, 255, 255, 0.06);
+            padding: 28px;
+            border-radius: 26px;
+            margin-top: 32px;
+            box-shadow: 0 12px 45px rgba(0, 0, 0, 0.4);
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        th,
+        td {
+            padding: 15px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 14px;
+        }
+        
+        th {
+            opacity: 0.85;
+        }
+        
+        .delete-btn {
+            background: #ef4444;
+            border: none;
+            padding: 9px 18px;
+            border-radius: 14px;
+            color: white;
+            cursor: pointer;
+            transition: 0.3s;
+            font-weight: 500;
+        }
+        
+        .delete-btn:hover {
+            background: #dc2626;
+        }
+        
+        h1,
+        h2,
+        h3 {
+            letter-spacing: 0.6px;
+        }
+        
+        #totalLead {
+            font-size: 36px;
+            font-weight: 600;
+        }
+        
+        footer {
+            text-align: center;
+            opacity: 0.6;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h2>🚀 Admin Control Panel</h2>
+        <div>
+            <p style="opacity:0.7">Lead Management System</p>
+        </div>
+    </header>
+
+
+    <section class="stats">
+        <div class="card">
+            <h3>Total Leads</h3>
+            <p id="totalLead">0</p>
+        </div>
+    </section>
+
+    <section class="table-box">
+        <h2>📋 Lead List</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Phone</th>
+                    <th>Email</th>
+                    <th>Message</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="leadTable"></tbody>
+        </table>
+    </section>
+    <button onclick="logout()">Logout</button>
+
+    <footer>
+        <p>Admin Dashboard © 2026</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="admin.js"></script>
+
+</body>
+
+</html>
