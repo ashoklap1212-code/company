@@ -155,7 +155,6 @@ nav a:hover {
     transform: translateY(-0px);
 }
 
-.about,
 .pricing,
 .services,
 .contact {
@@ -177,7 +176,7 @@ nav a:hover {
 .about p {
     margin-top: -70px;
     text-size-adjust: var(green);
-    font-size: 15px;
+    font-size: 13px;
     font-family: Italiana;
     text-align: justify;
 }
@@ -611,21 +610,34 @@ nav a:hover {
     }
 }
 
-
-/* Mobile screen */
-
 @media (max-width:768px) {
     header {
         flex-direction: column;
-        gap: 10px;
+        align-items: center;
     }
     nav {
-        flex-direction: column;
-    }
-    .card-container {
-        grid-template-columns: 1fr;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
     }
     .hero h1 {
-        font-size: 28px;
+        font-size: 32px;
+    }
+    .hero p {
+        font-size: 16px;
+    }
+    .boy-image {
+        width: 120px;
+        left: -40px;
+        top: -30px;
+    }
+    .footer-container {
+        flex-direction: column;
+    }
+    .footer-links {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .tech-container {
+        gap: 40px;
     }
 }
