@@ -647,6 +647,9 @@ nav a:hover {
     .hero p {
         font-size: 14px;
     }
+    .com {
+        display: none;
+    }
     .boy-image {
         width: 140px;
         left: -30px;
