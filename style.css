@@ -614,110 +614,96 @@ nav a:hover {
 
 @media (max-width:768px) {
     header {
+        padding: 12px 16px;
         flex-direction: column;
-        align-items: center;
+        align-items: flex-start;
+        gap: 8px;
     }
     nav {
-        display: none;
+        display: flex;
         flex-wrap: wrap;
-        justify-content: center;
-    }
-    .hero h1 {
-        font-size: 20px;
-        align-items: center;
-    }
-    .hero p {
-        font-size: 20px;
-        align-items: center;
-    }
-    .boy-image {
-        width: 120px;
-        left: -40px;
-        top: -30px;
-    }
-    .footer-container {
-        flex-direction: column;
-        display: flex;
+        gap: 8px;
         justify-content: flex-start;
     }
-    .footer-links {
-        grid-template-columns: repeat(2, 1fr);
-    }
-    .tech-container {
-        gap: 40px;
-    }
-    .footer {
-        display: flex;
-        justify-content: flex-start;
-        width: 468px;
-        padding: 20px;
-        box-sizing: border-box;
-    }
-    .theme-toggle {
-        margin-left: 200px;
-    }
-}
-
-
-/* Mobile Screen */
-
-@media (max-width:768px) {
-    nav {
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        padding: 1px;
-    }
-    nav.logo {
-        font-size: 18px;
-        margin-left: 100px;
-        width: 500px;
-        /* logo konjam small */
-    }
-    nav ul {
-        display: flex;
-        gap: 50px;
+    nav a {
+        margin-left: 0;
         font-size: 14px;
     }
     .btn-nav {
-        display: flex;
+        padding: 6px 14px;
     }
-}
-
-@media (max-width:768px) {
-    .services {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin-left: 70px;
+    .theme-toggle {
+        margin-left: 0;
+        align-self: flex-end;
+    }
+    .hero {
+        padding: 96px 16px 56px;
+        height: auto;
+    }
+    .hero h1 {
+        font-size: 26px;
+        margin-top: 40px;
+    }
+    .hero p {
+        font-size: 14px;
+    }
+    .boy-image {
+        width: 140px;
+        left: -30px;
+        top: -40px;
+    }
+    .pricing,
+    .services,
+    .contact {
+        padding: 56px 16px;
     }
     .services h2 {
-        margin-bottom: 10px;
-        margin-top: -280px;
-    }
-}
-
-@media (max-width:768px) {
-    .contact {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin-left: 50px;
-    }
-    .contact h2 {
-        font-size: 27px;
-    }
-    .pricing-container {
-        align-items: center;
-        margin-left: 70px;
+        margin-top: 0;
+        margin-bottom: 24px;
+        font-size: 28px;
     }
     .pricing h2 {
-        text-align: center;
-        margin-left: 70px;
+        font-size: 30px;
+        margin-bottom: 32px;
+    }
+    .pricing-container {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .price-card {
+        width: 100%;
+        padding: 28px 20px;
+    }
+    .contact-box {
+        padding: 24px 18px;
+    }
+    .contact h2 {
+        font-size: 26px;
+    }
+    .about {
+        margin-top: 0;
     }
     .about p {
-        text-align: center;
-        margin-left: 70px;
-        font-size: 10px;
+        margin-top: 8px;
+        font-size: 12px;
+        text-align: left;
+    }
+    .footer {
+        padding: 32px 16px;
+        width: 100%;
+    }
+    .footer-container {
+        flex-direction: column;
+        gap: 32px;
+    }
+    .footer-links {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 20px;
+    }
+    .tech {
+        padding: 40px 16px;
+    }
+    .tech-container {
+        gap: 32px;
     }
 }
