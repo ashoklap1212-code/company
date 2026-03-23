@@ -18,14 +18,23 @@ document.getElementById("contactForm").addEventListener("submit", async function
             { name: name, phone: phone, email: email, message: message }
         ])
 
-    if (error) {
-        alert("Error sending message")
-        console.log(error)
-    } else {
-        alert("Message sent successfully!")
-        document.getElementById("contactForm").reset()
+    function showToast(message, type) {
+        const toast = document.getElementById("toast");
+        toast.innerText = message;
+        toast.className = "toast show " + type;
+
+        setTimeout(() => {
+            toast.className = "toast";
+        }, 3000);
     }
 
+    if (error) {
+        console.log(error);
+        showToast("Error sending message", "error");
+    } else {
+        showToast("Message sent successfully!", "success");
+        document.getElementById("contactForm").reset();
+    }
 })
 
 
